@@ -1,0 +1,1 @@
+My personal setup notes and configurations for Windows, macOS, and all the little details in between.
