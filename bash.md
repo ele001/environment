@@ -14,3 +14,9 @@ USER_NAME=$(whoami)
 
 ps -u luowanxiang -o pid,cmd | grep "$SCRIPT_NAME" | awk '{print $1}' | xargs -r kill
 ```
+
+### Usage
+1. create ~/bin/kp
+2. `chmod +x ~/bin/kp`
+3. Add ~/bin to system path: `export PATH="$HOME/bin:$PATH"`
+4. `source ~/.bashrc`
