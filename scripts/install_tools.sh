@@ -51,7 +51,7 @@ if is_installed fzf; then
 else
     info fzf "installing..."
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf >/dev/null 2>&1
-    ~/.fzf/install --key-bindings --completion --no-update-rc >/dev/null 2>&1
+    ~/.fzf/install --all >/dev/null 2>&1
     done_msg "fzf"
 fi
 
