@@ -55,6 +55,19 @@
     (APIServer pid=2088646) INFO:     Application startup complete.
     ```
 
+    vLLM also supprots deploying an embedding model.
+    ``` bash
+    CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" \
+    vllm serve /data2/models/Qwen/Qwen3-Embedding-4B \
+    --host 0.0.0.0 \
+    --port 8654 \
+    --tensor-parallel-size 8 \
+    --dtype bfloat16 \
+    --max-model-len 4096 \
+    --gpu-memory-utilization 0.8 \
+    --served-model-name Qwen/Qwen-embedding
+    ```
+
 5. Call the LLM API in any way you like.
 
     ``` bash
