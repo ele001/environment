@@ -29,22 +29,27 @@ vim.keymap.set('n', '{', [[<Cmd>call search('^\s*$', 'bW')<CR>]], {noremap = tru
 vim.keymap.set('n', '}', [[<Cmd>call search('^\s*$', 'W')<CR>]], {noremap = true, silent = true})
 vim.keymap.set('v', '{', [[<Cmd>call search('^\s*$', 'bW')<CR>]], {noremap = true, silent = true})
 vim.keymap.set('v', '}', [[<Cmd>call search('^\s*$', 'W')<CR>]], {noremap = true, silent = true})
-   
 
+vim.opt.clipboard = "unnamedplus"
+vim.opt.fileencoding = "utf-8"
+
+-- NOTE: The below code snippet will lead to garbled text in zh UTF-8,
+--       if the system does not install WSL. For safety, we comment it out.
+--       See https://www.cnblogs.com/slwang/p/17641670.html
 -- Clipboard Settings for WSL
 -- Provided By NVim Official
-vim.g.clipboard = {
-  name = 'WslClipboard',
-  copy = {
-    ['+'] = 'clip.exe',
-    ['*'] = 'clip.exe',
-  },
-  paste = {
-    ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-  },
-  cache_enabled = 0,
-}
+-- vim.g.clipboard = {
+--   name = 'WslClipboard',
+--   copy = {
+--     ['+'] = 'clip.exe',
+--     ['*'] = 'clip.exe',
+--   },
+--   paste = {
+--     ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--     ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--   },
+--   cache_enabled = 0,
+-- }
 
 
 -- Global mappings.

@@ -79,7 +79,7 @@ mihomo
     
     Then, paste your clash verge yaml to `~/.config/mihomo/config.yaml`.
     
-    ![clash verge yaml](./bash_mihomo_yaml.png)
+    ![clash verge yaml](./figures/bash_mihomo_yaml.png)
     
     > Note that default ports 7890 and 9090 may cause conflict, you can change the configs below in the yaml to other available ports.
     
