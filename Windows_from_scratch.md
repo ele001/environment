@@ -14,7 +14,7 @@ win + R 输入 mmsys.cpl，切换到 声音 选项卡，点击 声音方案 下�
 1. 创建快捷方式
 2. 复制到 `C:\Users\ele 001\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` 文件夹（或者用 Win + R 输入 `shell:startup` 打开）
 3. Alt + Enter 查看属性，修改 `运行方式(R):` 为`最小化`
-4. (Optional) 加速 Startup 的程序的启动速度：创建并运行脚本 [regedit_startup.reg](./scripts/regedit_startup.reg)（修改注册表）
+4. (Optional) 加速 Startup 的程序的启动速度：创建并运行脚本 [regedit_startup.reg](./scripts/regedit_startup.reg)（修改注册表）（参考 [github issue](https://github.com/ZyperWave/ZyperWinOptimize/issues/24)）
 
 > Clash Verge uses the same way to set automatically startup. You can fine `Clash Verge` quick start in the same directory.
 

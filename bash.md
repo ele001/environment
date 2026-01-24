@@ -235,10 +235,9 @@ FRP builds a tunnel between server and local computer. We do not need to specify
 
     tar -xzf frp_0.65.0_linux_amd64.tar.gz
 
-    mv frp_0.65.0_linux_amd64 ~/bin
+    mv frp_0.65.0_linux_amd64 ~/bin/frp
     
     cd ~/bin
-    mv frp_0.65.0_linux_amd64 frp
     ```
     
     2. Modify frps.toml. `bindPort` is the frp server exposed port
@@ -278,7 +277,7 @@ FRP builds a tunnel between server and local computer. We do not need to specify
 
 3. Configure frp client in local computer.
 
-    1. Download `frp_0.65.0_windows_amd64.zip`
+    1. Download [frp_0.65.0_windows_amd64.zip](https://github.com/fatedier/frp/releases/download/v0.65.0/frp_0.65.0_windows_amd64.zip)
 from [github page](https://github.com/fatedier/frp/releases).
 
     2. Modify [frpc.toml](../../../frp_0.65.0_windows_amd64/frpc.toml).
@@ -304,6 +303,10 @@ from [github page](https://github.com/fatedier/frp/releases).
     .\nssm.exe install frpc_a100 "D:\frp_0.65.0_windows_amd64\frpc.exe" "-c D:\frp_0.65.0_windows_amd64\frpc_a100.toml"
     .\nssm.exe set frpc_a100 AppStdout "D:\frp_0.65.0_windows_amd64\logs\frpc_a100.log"
     .\nssm.exe set frpc_a100 AppStderr "D:\frp_0.65.0_windows_amd64\logs\frpc_a100.log"
+
+    .\nssm.exe install frpc_4090 "D:\frp_0.65.0_windows_amd64\frpc.exe" "-c D:\frp_0.65.0_windows_amd64\frpc_4090.toml"
+    .\nssm.exe set frpc_4090 AppStdout "D:\frp_0.65.0_windows_amd64\logs\frpc_4090.log"
+    .\nssm.exe set frpc_4090 AppStderr "D:\frp_0.65.0_windows_amd64\logs\frpc_4090.log"
     
     # GUI
     .\nssm.exe install frpc_a100
